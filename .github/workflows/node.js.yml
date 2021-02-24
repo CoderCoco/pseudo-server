@@ -26,5 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - uses: bradennapier/eslint-plus-action@v3.4.2
+      with:
+        configFile: .eslintrc.js
+        includeGlob: ./src/**/*.ts
     - run: npm run build --if-present
     - run: npm test
+    
