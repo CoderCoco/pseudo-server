@@ -32,4 +32,5 @@ jobs:
     - uses: bradennapier/eslint-plus-action@v3.4.2
       with:
         configFile: .eslintrc.js
-        includeGlob: ./src/**/*.ts
+        includeGlob: 
+        - ./src/**/*.ts
