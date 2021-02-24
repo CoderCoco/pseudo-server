@@ -29,8 +29,8 @@ jobs:
       with:
         node-version: ${{ env.node-version }}
     - run: npm ci
-    - uses: bradennapier/eslint-plus-action@v3.4.2
+    - name: eslint
+      uses: reviewdog/action-eslint@v1
       with:
-        configFile: .eslintrc.js
-        includeGlob: 
-        - ./src/**/*.ts
+        reporter: github-check # github-pr-check,github-check,github-pr-review
+        eslint_flags: 'src/**/*.ts'
