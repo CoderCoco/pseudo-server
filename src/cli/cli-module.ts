@@ -13,4 +13,3 @@ export class CliModule {
     this.container.bind<Launcher>(Launcher).to(Launcher);
   }
 }
-
