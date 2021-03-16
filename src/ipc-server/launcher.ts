@@ -7,7 +7,7 @@ export class Launcher {
     console.log("args and ipcserver defined");
   }
 
-  public launch() {
+  public launch(): void {
     console.log("starting the IPC server");
     this.ipcServer.startServer();
   }

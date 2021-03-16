@@ -1,5 +1,4 @@
 import { Container } from "inversify";
-import "reflect-metadata";
 import { ProcessArgs } from "./process-args";
 import { IpcServer } from "./ipc-server";
 import { Launcher } from "./launcher";

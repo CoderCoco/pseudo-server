@@ -37,7 +37,12 @@ module.exports = {
     "@typescript-eslint/class-literal-property-style": ["warn", "fields"],
     "@typescript-eslint/consistent-indexed-object-style": ["warn", "record"],
     "@typescript-eslint/explicit-function-return-type": "error",
-    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/explicit-member-accessibility": ["error", {
+      accessibility: "explicit",
+      overrides: {
+        constructors: "no-public"
+      }
+    }],
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/member-delimiter-style": "error",
     "@typescript-eslint/member-ordering": ["error", {
@@ -140,7 +145,7 @@ module.exports = {
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-parameter-properties": ["error", {
-      allows: ["readonly"]
+      allows: ["private readonly"]
     }],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-this-alias": "error",
@@ -175,7 +180,7 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-readonly": "warn",
-    "@typescript-eslint/prefer-readonly-parameter-types": "error",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/prefer-reduce-type-parameter": "error",
     "@typescript-eslint/prefer-regexp-exec": "warn",
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
@@ -258,7 +263,8 @@ module.exports = {
       {
         ignoreEnums: true,
         ignoreNumericLiteralTypes: true,
-        ignoreReadonlyClassProperties: true
+        ignoreReadonlyClassProperties: true,
+        ignore: [-1, 0, 1, 2]
       }
     ],
 

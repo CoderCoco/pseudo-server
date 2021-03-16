@@ -1,3 +1,5 @@
+import "reflect-metadata";
+
 import { CliModule } from "./cli-module";
 import { Launcher } from "./launcher";
 

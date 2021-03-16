@@ -7,7 +7,7 @@ type YargsChain = yargs.Argv | typeof yargs;
 export class ProcessArgs {
   public readonly ipcPath: string;
 
-  public constructor() {
+  constructor() {
     let argProcessor: YargsChain = yargs;
 
     argProcessor = argProcessor.demandCommand();
