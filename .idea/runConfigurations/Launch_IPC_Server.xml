@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Launch IPC Server" type="NodeJSConfigurationType" application-parameters="launch-ipc /tmp/test" path-to-node="$PROJECT_DIR$/node_modules/.bin/ts-node.cmd" path-to-js-file="src/ipc-server/runner.ts" working-dir="$PROJECT_DIR$">
+    <method v="2" />
+  </configuration>
+</component>
